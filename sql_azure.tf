@@ -45,10 +45,10 @@ resource "azurerm_sql_database" "db" {
   resource_group_name              = azurerm_resource_group.rg.name
   location                         = var.location
   server_name                      = azurerm_sql_server.sqlazure.name
-  edition                          = var.admin_db_config.edition
-  requested_service_objective_name = var.admin_db_config.size
+  edition                          = "Standard"
+  requested_service_objective_name = "S1"
 
-  tags = local.Tags
+  tags = local.tags
 
   depends_on = [azurerm_sql_firewall_rule.sqlallowtfhost]
 
