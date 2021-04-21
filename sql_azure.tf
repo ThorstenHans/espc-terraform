@@ -4,12 +4,12 @@ data "http" "current_ip" {
 
 data "azurerm_key_vault_secret" "sql_admin_pwd" {
   key_vault_id = var.keyvault_id
-  name         = "sql-admin-pwd"
+  name         = "sql-admin-pw"
 }
 
 data "azurerm_key_vault_secret" "sql_pwd" {
   key_vault_id = var.keyvault_id
-  name         = "sql-pwd"
+  name         = "sql-user-pw"
 }
 
 resource "azurerm_sql_server" "sqlazure" {
