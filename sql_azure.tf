@@ -3,12 +3,12 @@ data "http" "current_ip" {
 }
 
 data "azurerm_key_vault_secret" "sql_admin_pwd" {
-  key_vault_id = "value"
+  key_vault_id = var.keyvault_id
   name         = "sql-admin-pwd"
 }
 
 data "azurerm_key_vault_secret" "sql_pwd" {
-  key_vault_id = "value"
+  key_vault_id = var.keyvault_id
   name         = "sql-pwd"
 }
 

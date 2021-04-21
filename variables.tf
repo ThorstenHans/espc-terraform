@@ -14,4 +14,7 @@ variable "custom_tags" {
   description = "Custom Azure Tags associated with every resource"
 }
 
-
+variable "keyvault_id" {
+  type        = string
+  description = "Existing Key Vault identifier"
+}
