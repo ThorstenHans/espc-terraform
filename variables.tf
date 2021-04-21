@@ -13,3 +13,5 @@ variable "custom_tags" {
   default     = {}
   description = "Custom Azure Tags associated with every resource"
 }
+
+
