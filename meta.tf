@@ -3,7 +3,16 @@ provider "azurerm" {
 }
 
 terraform {
+
   required_version = "=0.15.0"
+
+  backend "azurerm" {
+    resource_group_name = "rg-escp-state-backend"
+    container_name      = "terraform-state"
+    key                 = "espc2021.tfstate"
+    use_azuread_auth    = true
+  }
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
