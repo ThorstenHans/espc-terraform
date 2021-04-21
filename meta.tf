@@ -7,7 +7,7 @@ terraform {
   required_version = "=0.15.0"
 
   backend "azurerm" {
-    resource_group_name  = "rg-escp-state-backend"
+    resource_group_name  = "rg-espc-state-backend"
     storage_account_name = "saespc2021state"
     container_name       = "terraform-state"
     key                  = "espc2021.tfstate"
